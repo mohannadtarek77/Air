@@ -1,0 +1,59 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "This Repo includes all packages and dependencies for using cypress with linting and documentation!",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "cypress run",
+    "cypress": "cypress open",
+    "lint": "eslint ./cypress --color",
+    "lint:fix": "eslint ./cypress --color --fix",
+    "lint-staged": "lint-staged",
+    "commit": "git-cz",
+    "allur": "./node_modules/.bin/cypress run --reporter mocha-allure-reporter",
+    "report": "./node_modules/.bin/allure generate allure-results --clean -o allure-report",
+    "clean": "rm -r allure-results/ allure-report/",
+    "documentation": "./node_modules/.bin/esdoc && xdg-open ./docs/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:robustastudio/robustastudio-testing/automation-cypress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "@shelex/cypress-allure-plugin": "^1.3.0",
+    "babel-eslint": "^10.0.2",
+    "commitizen": "^3.1.2",
+    "cypress": "^5.3.0",
+    "cypress-localstorage-commands": "^1.1.8",
+    "cz-conventional-changelog": "^2.1.0",
+    "esdoc": "^1.1.0",
+    "esdoc-standard-plugin": "^1.0.0",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-cypress": "^2.2.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.2.0",
+    "prettier": "^1.18.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "i": "^0.3.6",
+    "whatwg-fetch": "^3.4.1"
+  }
+}

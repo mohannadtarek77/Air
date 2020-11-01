@@ -1,0 +1,13 @@
+{
+    "url": "/login",
+    "username": {
+      "selector": "#username",
+      "name": "Tom Smith"
+    },
+    "password": {
+      "selector": "#password",
+      "passwordValue": "SuperSecretPassword!"
+    },
+    "loginButton": ".fa",
+    "wrongCredentialsValidation":" Your username is invalid!"
+  }  

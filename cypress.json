@@ -1,0 +1,17 @@
+{
+  "baseUrl": "http://the-internet.herokuapp.com",
+  "viewportWidth": 1000,
+  "viewportHeight": 700,
+  "defaultCommandTimeout": 10000,
+  "env": {
+    "tmsPrefix": "https://url-to-bug-tracking-system/task-",
+    "issuePrefix": "https://url-to-tms/tests/caseId-"
+  },
+  "video": true,
+  "videoCompression": 32,
+  "videoUploadOnPasses": true,
+  "uploadVideos": true,
+  "recordVideos": true,
+  "videosFolder": "cypress/videos",
+  "projectId": "35ksnn"
+}
